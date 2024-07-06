@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>$MILOU</title>
+        <meta
+          name="description"
+          content="The cutest dog billy, is going to a billy." />
+        <link rel="canonical" href="https://billysol.lol/" />
+        <link rel="shortlink" href="https://billysol.lol/" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <meta property="og:url" content="https://billysol.lol/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="$MILOU" />
+        <meta
+          property="og:description"
+          content="The cutest dog billy, is going to a billy." />
+        <meta property="og:image" content="/preview.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="billysol.lol/" />
+        <meta property="twitter:url" content="https://billysol.lol/" />
+        <meta name="twitter:title" content="$MILOU" />
+        <meta
+          name="twitter:description"
+          content="The cutest dog billy, is going to a billy." />
+        <meta name="twitter:image" content="/preview.png" />
+  </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var audioElem = document.getElementById("myAudio");
+        audioElem.pause();
+        audioElem.muted = true;
+        audioElem.volume = 0;
+
+        function updateMuteButtonText() {
+            var muteBtn = document.getElementById("muteButton");
+            muteBtn.textContent = audioElem.muted ? "SONG" : "MUTE";
+        }
+
+        function fadeInVolume(targetVolume, duration) {
+            var volumeStep = targetVolume / (duration / 100);
+            var currentVolume = audioElem.volume;
+            var fadeInterval = setInterval(function () {
+                currentVolume += volumeStep;
+                if (currentVolume >= targetVolume) {
+                    audioElem.volume = targetVolume;
+                    clearInterval(fadeInterval);
+                } else {
+                    audioElem.volume = currentVolume;
+                }
+            }, 100);
+        }
+
+        function toggleMute() {
+            if (audioElem.muted) {
+                audioElem.muted = false;
+                audioElem
+                    .play()
+                    .then(() => {
+                        fadeInVolume(1.0, 5000); // Change targetVolume to 1.0 for 100%
+                    })
+                    .catch((e) => console.error("Playback failed:", e));
+            } else {
+                audioElem.muted = true;
+                audioElem.pause();
+                audioElem.volume = 0;
+            }
+            updateMuteButtonText();
+        }
+
+        var muteBtn = document.getElementById("muteButton");
+        muteBtn.addEventListener("click", toggleMute);
+
+        updateMuteButtonText();
+    });
+</script>
+
+  <body>
+
+       <audio id="myAudio" autoplay loop>
+        <source src="asset/billy.mp3" type="audio/mpeg" />
+      </audio>
+
+    <div class="hearthands" id="object1"></div>
+    <div class="doubleheart" id="object2"></div>
+    <div class="growingheart" id="object3"></div>
+    <div class="stars" id="object4"></div>
+    <div class="sparkleheart" id="object5"></div>
+    <div class="heartsmile" id="object6"></div>
+    <div class="paws" id="object7"></div>
+    <div class="pinch" id="object8"></div>
+    <div class="blueheart" id="object9"></div>
+    <div class="bone" id="object10"></div>
+
+    <div class="navigation-bar">
+      <a class="link"
+        href="https://dexscreener.com/solana/6uftunlrmn4knvdudhx4ngh7lrzdpya9qjeqeytjwbbe"
+        >BUY</a
+      >
+      <a class="link" href="https://linktr.ee/MILOUCOIN">LINKS</a>
+      <a class="link" href="https://dexscreener.com/solana/6uftunlrmn4knvdudhx4ngh7lrzdpya9qjeqeytjwbbe"
+        >CHART</a
+      >
+      <a class="link" onclick="toggleMute()" id="muteButton">UNMUTE</a>
+    </div>
+    <div class="container">
+    <div class="content">
+      <img src="asset/billy.jpg" class="portrait" />
+    </div>
+    <div class="content-text">
+      <p>
+        $MILOU<br> 
+        the legendary dog of Tintin, now the most wanted criminal in the crypto world with a $1,000,000,000,000 reward.
+      </p>
+    </div>
+
+    <a href="">
+      <div class="button"><span>BUY SOME $MILOU!</span></div>
+    </a>
+  
+
+    <div class="hodi__main-tag">
+  <div class="hodi__main-tag-title">
+    contract
+  </div>
+  <div class="hodi__main-tag-right">
+    <textarea readonly="" id="hodi-address" class=" hodi__main-tag-right-textarea">6uftUnLrMN4KNVdUdHX4nGH7LRzDpyA9QjEqEYTjWBbE</textarea>
+    <p class="hodi__main-tag-address">
+      6uftU....WBbE
+    </p>
+    <div class="hodi__main-tag-copy" id="copy-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M384 336H192c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16l140.1 0L400 115.9V320c0 8.8-7.2 16-16 16zM192 384H384c35.3 0 64-28.7 64-64V115.9c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1H192c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H256c35.3 0 64-28.7 64-64V416H272v32c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192c0-8.8 7.2-16 16-16H96V128H64z"/></svg>
+    </div>
+    <script>
+      
+document.addEventListener('DOMContentLoaded', function () {
+    var copyButton = document.getElementById('copy-btn');
+    var copyMsg = document.getElementById('copy-msg'); // Get the message span
+
+    copyButton.addEventListener('click', function () {
+        var copyText = document.getElementById('hodi-address');
+
+        // Ensure the textarea is selectable even if it's readonly
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
+
+        navigator.clipboard.writeText(copyText.value).then(function() {
+            console.log('Copying to clipboard was successful!');
+            // Add the active class to show the message
+            copyMsg.classList.add('hodi__main-tag-msg_active');
+
+            // Optional: Remove the active class after 2 seconds to hide the message
+            setTimeout(function() {
+                copyMsg.classList.remove('hodi__main-tag-msg_active');
+            }, 2000);
+        }, function(err) {
+            console.error('Could not copy text: ', err);
+        });
+
+        // Deselect the text field
+        window.getSelection().removeAllRanges();
+    });
+});
+
+    </script>
+  </div>
+
+  <span class="hodi__main-tag-msg" id="copy-msg">Copied</span>
+</div>
+
+    <div class="container">
+      <div class="externals">
+        <a href="https://t.me/MILOUiswanted" target="_blank"
+          ><div class="square">
+            <img src="asset/telegram.svg" alt="logo" class="logo" /></div
+        ></a>
+        <a href="https://x.com/Miloucoinsolana" target="_blank"
+          ><div class="square">
+            <img src="asset/x.svg" alt="logo" class="logo" /></div
+        ></a>
+        <a
+          href="https://dexscreener.com/solana/6uftunlrmn4knvdudhx4ngh7lrzdpya9qjeqeytjwbbe"
+          target="_blank"
+          ><div class="square">
+            <img src="asset/dexscreener.svg" alt="logo" class="logo" /></div
+        ></a>
+        <a
+        href=""
+        target="_blank"
+        ><div class="square">
+          <img src="asset/dextools.svg" alt="logo" class="logo" /></div
+      ></a>
+      </div>
+      <div class="externals">
+        <a href="" target="_blank"
+        ><div class="square">
+          <img src="asset/birdeye.svg" alt="logo" class="logo" /></div
+      ></a>
+        <a href="" target="_blank"
+          ><div class="square">
+            <img src="asset/coingecko.svg" alt="logo" class="logo" /></div
+        ></a>
+        <a href="" target="_blank"
+        ><div class="square">
+          <img src="asset/coinmarketcap.svg" alt="logo" class="logo" /></div
+      ></a>
+      </div>
+  </div>
+
+  <div class="content-text">
+    <p>
+    $MILOU meme!
+    </p>
+  </div>
+  
+    <div class="horizontal-container">
+      <img src="asset/meme3.jpg" id="slideshow" class="meme" />
+  </div>
+
+  <script>
+    const images = [
+      "asset/meme3.jpg",
+      "asset/meme2.png",
+      "asset/meme1.png",
+      "asset/meme4.jpg",
+      "asset/meme5.png",
+      "asset/meme8.png",
+      "asset/meme9.png",
+      ];
+
+    let currentImageIndex = 0;
+    const slideshowElement = document.getElementById("slideshow");
+
+    function changeImage() {
+      slideshowElement.classList.add("fade-out");
+
+      setTimeout(() => {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        slideshowElement.src = images[currentImageIndex];
+        slideshowElement.classList.remove("fade-out");
+        slideshowElement.classList.add("fade-in");
+      }, 1000);
+    }
+
+    setInterval(changeImage, 3000);
+
+    slideshowElement.classList.add("fade-in");
+  </script>
+    <div class="button" style="margin-bottom: 40px; opacity: 80%;"><span>COMING SOON</span></div>
+  </body>
+</html>
